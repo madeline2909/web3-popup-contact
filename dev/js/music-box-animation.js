@@ -1,7 +1,7 @@
 var musicBoxAnimationTimeline = gsap.timeline({paused:true});
 var musicNotesSpeedUp = .5;
 var musicNotesSpeeddown = 1;
-var formSpeed = .8;
+var formSpeed = 1;
 
 
 musicBoxAnimationTimeline.addLabel("boxToMusic")
@@ -24,4 +24,7 @@ musicBoxAnimationTimeline.addLabel("boxToMusic")
                         .to("#note-3",{duration:musicNotesSpeeddown, y:-24, alpha:0}, "animateForm")
                         .to("#note-4",{duration:musicNotesSpeeddown, y:-52, fill:"#EE478C", alpha:0}, "animateForm")
                         .to("#note-5",{duration:musicNotesSpeeddown, y:-54, fill:"#3FB49F", alpha:0}, "animateForm")
-                        .from("#pop-up",{duration:formSpeed, y:500, x:500, scale:0.01, alpha:0}, "animateForm");
+                        .from("#pop-up",{duration:formSpeed, y:230, x:480, scale:0.01, alpha:0, rotate:360}, "animateForm")
+                        .addPause()
+                        .addLabel("noteToFlow")
+                        .to("#note-1",{duration:musicNotesSpeedUp, y:-50}, "animateNote")
