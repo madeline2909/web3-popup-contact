@@ -1,13 +1,11 @@
 #music-box-container {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    // margin-top: 100px;
-    // margin-bottom: 50px;
-    
-    // display: flex;
-    // justify-content: flex-end;
-
+    bottom: 20px;
+    right: 15px;
+    @include md{
+        bottom: 30px;
+        right: 30px;
+    }
     #music {
         #box {
             cursor: pointer;

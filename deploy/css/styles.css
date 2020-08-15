@@ -574,6 +574,7 @@ header div #burger-container i {
   background-image: url(../img/hero.jpg);
   background-blend-mode: multiply;
   background-color: rgba(73, 33, 136, 0.3);
+  margin-bottom: 20px;
 }
 #hero-image > div {
   height: 100%;
@@ -593,11 +594,11 @@ header div #burger-container i {
 #hero-image > div h1 {
   color: #FA448D;
   font-family: "Montserrat", sans-serif;
-  font-size: 2.25rem;
-  line-height: 2.75rem;
+  font-size: 3.75rem;
+  line-height: 4.0625rem;
   font-weight: 900;
   text-align: left;
-  margin: 0 30px;
+  margin: 0 100px 0 30px;
 }
 @media (min-width: 768px) {
   #hero-image > div h1 {
@@ -605,6 +606,7 @@ header div #burger-container i {
     text-align: center;
     font-size: 4.5rem;
     line-height: 5.5rem;
+    margin: 0;
   }
 }
 @media (min-width: 1025px) {
@@ -622,8 +624,41 @@ header div #burger-container i {
 #hero-image > div h1 .italic {
   font-style: italic;
 }
-#hero-image #index-content {
-  height: 300vh;
+
+#index-content {
+  height: auto;
+}
+#index-content div {
+  display: grid;
+  grid-template-columns: auto repeat(3, 30%) auto;
+  grid-template-areas: ". p img1 img1 ." "img2 img2 img2 img2 img2";
+  grid-gap: 20px;
+}
+#index-content div img {
+  object-fit: cover;
+}
+#index-content div p {
+  grid-area: p;
+  color: #FA448D;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  font-style: italic;
+  background-color: #331B39;
+  padding: 40px 50px;
+}
+#index-content div :nth-child(2) {
+  grid-area: img1;
+  object-position: center bottom;
+  width: 100%;
+  height: 100%;
+}
+#index-content div :nth-child(3) {
+  grid-area: img2;
+  height: 500px;
+  object-position: center;
+  width: 100%;
 }
 
 /* =============
@@ -761,8 +796,14 @@ header div #burger-container i {
 
 #music-box-container {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 15px;
+}
+@media (min-width: 768px) {
+  #music-box-container {
+    bottom: 30px;
+    right: 30px;
+  }
 }
 #music-box-container #music #box {
   cursor: pointer;
