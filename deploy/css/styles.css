@@ -630,33 +630,62 @@ header div #burger-container i {
 }
 #index-content div {
   display: grid;
-  grid-template-columns: auto repeat(3, 30%) auto;
-  grid-template-areas: ". p img1 img1 ." "img2 img2 img2 img2 img2";
-  grid-gap: 20px;
+  grid-template-rows: 400px 300px 400px;
+  grid-template-areas: "img1" "p" "img2";
 }
-#index-content div img {
-  object-fit: cover;
+@media (min-width: 768px) {
+  #index-content div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px 500px;
+    grid-template-areas: "p img1" "img2 img2";
+    grid-gap: 20px;
+  }
 }
-#index-content div p {
+@media (min-width: 1025px) {
+  #index-content div {
+    grid-template-columns: auto repeat(3, 30%) auto;
+    grid-template-rows: 500px 500px;
+    grid-template-areas: ". p img1 img1 ." "img2 img2 img2 img2 img2";
+    grid-gap: 20px;
+  }
+}
+#index-content div #intro {
   grid-area: p;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #331B39;
+}
+#index-content div #intro p {
   color: #FA448D;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: 1.125rem;
   line-height: 1.5625rem;
   font-style: italic;
-  background-color: #331B39;
-  padding: 40px 50px;
+  margin: 0 20px;
+}
+@media (min-width: 768px) {
+  #index-content div #intro p {
+    margin: 0 40px;
+  }
+}
+@media (min-width: 1025px) {
+  #index-content div #intro p {
+    margin: 0 60px;
+  }
 }
 #index-content div :nth-child(2) {
   grid-area: img1;
+  object-fit: cover;
   object-position: center bottom;
   width: 100%;
   height: 100%;
 }
 #index-content div :nth-child(3) {
+  object-fit: cover;
   grid-area: img2;
-  height: 500px;
+  height: 100%;
   object-position: center;
   width: 100%;
 }
