@@ -2,7 +2,7 @@ gsap.registerPlugin(MotionPathPlugin);
 
 
 var formAnimationTimeline = gsap.timeline({paused:true});
-var motionPathAnimationTime = 1.5;
+var motionPathAnimationTime = 1.25;
 // gsap.set("#input-path",{transformOrigin: "center"});
 gsap.set(".input",{transformOrigin: "left center", alpha:1})
 gsap.set(".bottom-border",{alpha:1});
@@ -39,7 +39,7 @@ formAnimationTimeline.from(".main-text",{
     duration: motionPathAnimationTime,
     ease: "power1.inOut",
     alpha:0
-},"-=1", "formAnimation")
+}, "-=1")
 .from("#message", {
     motionPath: {
         path: messagePath,
@@ -50,7 +50,7 @@ formAnimationTimeline.from(".main-text",{
     duration: motionPathAnimationTime,
     ease: "power1.inOut",
     alpha:0
-},"-=1", "formAnimation")
+}, "-=1")
 
 .from("button",{
     duration: motionPathAnimationTime,
@@ -58,7 +58,7 @@ formAnimationTimeline.from(".main-text",{
 }, "formAnimation")
 
 .from(".bottom-border",{
-    duration: 0.25,
+    duration: 0.5,
     alpha:0
-},"bottomBordersFadeIn")
+}, "-=1")
 ;

@@ -11,9 +11,18 @@ $("#X").on("mouseleave", function(){
 }
 );
 
-$("#X").on("click", function(){
+$("#X").on("click", function (){
     console.log("X click");
     musicBoxAnimationTimeline.reverse("musicToForm");
     formAnimationTimeline.reverse();
     canYouSeeTheForm = false;
 });
+
+var formBackground = document.querySelector("#pop-up");
+window.onclick = function(event){
+    if(event.target == formBackground){
+        musicBoxAnimationTimeline.reverse("musicToForm");
+        formAnimationTimeline.reverse();
+        canYouSeeTheForm = false;
+    }
+}

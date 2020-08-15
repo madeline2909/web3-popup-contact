@@ -28,6 +28,7 @@
             color: $yellow;
             font-size: 280px;
             @include md{
+                z-index: 1;
                 left: -145px;
                 top: 100px;
                 font-size: 300px;

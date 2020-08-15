@@ -726,6 +726,7 @@ header div #burger-container i {
 }
 @media (min-width: 768px) {
   #pop-up > div i {
+    z-index: 1;
     left: -145px;
     top: 100px;
     font-size: 300px;
