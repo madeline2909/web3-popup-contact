@@ -2,15 +2,56 @@
     position: fixed;
     bottom: 20px;
     right: 15px;
-    @include md{
+
+    @include md {
         bottom: 30px;
         right: 30px;
     }
+
     #music {
         #box {
             cursor: pointer;
             transition: 0.25s;
         }
 
+    }
+
+    .animating {
+        animation: bounce;
+        animation-duration: 3s;
+    }
+
+    @keyframes bounce {
+        8% {
+            transform: translateY(-10px);
+        }
+
+        10% {
+            transform: translateY(0px);
+        }
+
+        15% {
+            transform: translateY(-8px);
+        }
+
+        19% {
+            transform: translateY(0px);
+        }
+
+        21% {
+            transform: translateY(-4px);
+        }
+
+        24% {
+            transform: translateY(0px);
+        }
+
+        26% {
+            transform: translateY(-1px);
+        }
+
+        27% {
+            transform: translateY(0px);
+        }
     }
 }

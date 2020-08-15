@@ -27,3 +27,11 @@ $("#box").on("click", function(){
         console.log
     }
 });
+
+
+$("#box").on('click', function() {
+    $(this).addClass('animating');
+    setTimeout(() => {
+      $(this).removeClass('animating');
+    }, 1000);
+  });
