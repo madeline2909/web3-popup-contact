@@ -574,6 +574,7 @@ header div #burger-container i {
   background-image: url(../img/hero.jpg);
   background-blend-mode: multiply;
   background-color: rgba(73, 33, 136, 0.3);
+  margin-bottom: 20px;
 }
 #hero-image > div {
   height: 100%;
@@ -593,11 +594,11 @@ header div #burger-container i {
 #hero-image > div h1 {
   color: #FA448D;
   font-family: "Montserrat", sans-serif;
-  font-size: 2.25rem;
-  line-height: 2.75rem;
+  font-size: 3.75rem;
+  line-height: 4.0625rem;
   font-weight: 900;
   text-align: left;
-  margin: 0 30px;
+  margin: 0 100px 0 30px;
 }
 @media (min-width: 768px) {
   #hero-image > div h1 {
@@ -605,6 +606,7 @@ header div #burger-container i {
     text-align: center;
     font-size: 4.5rem;
     line-height: 5.5rem;
+    margin: 0;
   }
 }
 @media (min-width: 1025px) {
@@ -623,34 +625,113 @@ header div #burger-container i {
   font-style: italic;
 }
 
+#index-content {
+  height: auto;
+}
+#index-content div {
+  display: grid;
+  grid-template-rows: 400px 300px 400px;
+  grid-template-areas: "img1" "p" "img2";
+}
+@media (min-width: 768px) {
+  #index-content div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px 500px;
+    grid-template-areas: "p img1" "img2 img2";
+    grid-gap: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  #index-content div {
+    grid-template-columns: auto repeat(3, 30%) auto;
+    grid-template-rows: 500px 500px;
+    grid-template-areas: ". p img1 img1 ." "img2 img2 img2 img2 img2";
+    grid-gap: 20px;
+  }
+}
+#index-content div #intro {
+  grid-area: p;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #331B39;
+}
+#index-content div #intro p {
+  color: #FA448D;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  font-style: italic;
+  margin: 0 20px;
+}
+@media (min-width: 768px) {
+  #index-content div #intro p {
+    margin: 0 40px;
+  }
+}
+@media (min-width: 1025px) {
+  #index-content div #intro p {
+    margin: 0 60px;
+  }
+}
+#index-content div :nth-child(2) {
+  grid-area: img1;
+  object-fit: cover;
+  object-position: center bottom;
+  width: 100%;
+  height: 100%;
+}
+#index-content div :nth-child(3) {
+  object-fit: cover;
+  grid-area: img2;
+  height: 100%;
+  object-position: center;
+  width: 100%;
+}
+
 /* =============
     Pop-up
 ============= */
 #pop-up {
-  position: absolute;
-}
-#pop-up #shadow-bg {
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
   height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #pop-up > div {
   position: relative;
   overflow: hidden;
-  width: 700px;
+  width: 90%;
   height: auto;
   background-color: white;
   z-index: 1;
 }
+@media (min-width: 768px) {
+  #pop-up > div {
+    width: 700px;
+  }
+}
 #pop-up > div i {
   position: absolute;
-  z-index: 1;
-  left: -145px;
-  top: 100px;
-  font-size: 300px;
-  color: #FA448D;
+  z-index: -1;
+  left: -140px;
+  top: -100px;
+  color: #FEC858;
+  font-size: 280px;
   -webkit-animation: rotation 2s infinite linear;
+}
+@media (min-width: 768px) {
+  #pop-up > div i {
+    z-index: 1;
+    left: -145px;
+    top: 100px;
+    font-size: 300px;
+    color: #FA448D;
+  }
 }
 @-webkit-keyframes rotation {
   from {
@@ -661,31 +742,61 @@ header div #burger-container i {
   }
 }
 #pop-up > div #X {
+  z-index: 200;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
+}
+@media (min-width: 768px) {
+  #pop-up > div #X {
+    top: 30px;
+    right: 30px;
+  }
 }
 #pop-up > div #handle {
-  position: absolute;
-  top: -30px;
-  z-index: 2;
-  left: 80px;
-  transform: rotate(20deg);
+  display: none;
+}
+@media (min-width: 768px) {
+  #pop-up > div #handle {
+    display: block;
+    position: absolute;
+    top: -30px;
+    z-index: 2;
+    left: 80px;
+    transform: rotate(20deg);
+  }
 }
 #pop-up > div #waves {
-  position: absolute;
-  top: 0;
-  left: -20px;
-  z-index: -1;
-  width: 50%;
+  display: none;
+}
+@media (min-width: 768px) {
+  #pop-up > div #waves {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    z-index: -1;
+    width: 50%;
+  }
 }
 #pop-up > div #form {
   display: flex;
-  justify-content: flex-end;
-  margin: 10px 80px 50px;
+  justify-content: center;
+  margin: 20px 0 40px 0;
+}
+@media (min-width: 768px) {
+  #pop-up > div #form {
+    justify-content: flex-end;
+    margin: 10px 80px 50px;
+  }
 }
 #pop-up > div #form form {
-  width: 60%;
+  width: 80%;
+}
+@media (min-width: 768px) {
+  #pop-up > div #form form {
+    width: 60%;
+  }
 }
 #pop-up > div #form form .input {
   position: relative;
@@ -694,9 +805,6 @@ header div #burger-container i {
   position: absolute;
   top: 0;
   left: 0;
-}
-#pop-up > div #form section {
-  border-bottom: solid #42B5A0 2px;
 }
 #pop-up > div #form section input, #pop-up > div #form section textarea {
   background-color: transparent;
@@ -719,20 +827,35 @@ header div #burger-container i {
   /* Microsoft Edge */
   color: #42B5A0;
 }
+#pop-up > div #form section .bottom-border {
+  height: 2px;
+  width: 100%;
+  background-color: #42B5A0;
+}
 #pop-up > div #form :nth-child(4) {
   border-bottom: none;
 }
 #pop-up > div #form :nth-child(5) {
   border-bottom: none;
 }
+#pop-up > div #form :nth-child(5) :hover {
+  transition: 0.25s;
+  color: #FA448D;
+  background-color: #FEC858;
+}
 #pop-up h2 {
-  padding-top: 30px;
+  padding-top: 50px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: 800;
   font-style: italic;
   color: #FA448D;
+}
+@media (min-width: 768px) {
+  #pop-up h2 {
+    padding-top: 30px;
+  }
 }
 #pop-up h3 {
   padding: 20px 0;
@@ -745,15 +868,24 @@ header div #burger-container i {
   color: #FA448D;
 }
 #pop-up #description {
-  padding: 0;
+  padding: 0 60px;
+}
+@media (min-width: 768px) {
+  #pop-up #description {
+    padding: 0;
+  }
 }
 
 #music-box-container {
-  margin-top: 100px;
-  margin-bottom: 50px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+}
+@media (min-width: 768px) {
+  #music-box-container {
+    bottom: 30px;
+    right: 30px;
+  }
 }
 #music-box-container #music #box {
   cursor: pointer;

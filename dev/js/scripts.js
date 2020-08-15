@@ -1,6 +1,6 @@
 
 // @codekit-prepend "cd-animation.js";
-// @codekit-prepend "X-hover.js";
+// @codekit-prepend "X-animation.js";
 
 // @codekit-prepend "music-box-sound.js";
 // @codekit-prepend "music-box-animation.js";

@@ -3,33 +3,39 @@
 ============= */
 #pop-up{
     // display: none;
-    position: absolute;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    #shadow-bg{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        background-color: rgba($color:black, $alpha: 0.4);
-    }
-    
+    position: fixed;
+    background-color: rgba($color:black, $alpha: 0.4);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     >div{
         position: relative;
         overflow: hidden;
-        width: 700px;
+        width: 90%;
         height: auto;
         background-color: white;
         z-index: 1;
+        @include md{
+            width: 700px;
+        }
         i{
             position: absolute;
-            z-index: 1;
-            left: -145px;
-            top: 100px;
-            font-size: 300px;
-            color: $hotpink;
+            z-index: -1;
+            left: -140px;
+            top: -100px;
+            color: $yellow;
+            font-size: 280px;
+            @include md{
+                z-index: 1;
+                left: -145px;
+                top: 100px;
+                font-size: 300px;
+                color: $hotpink;
+            }
             -webkit-animation: rotation 2s infinite linear;
-        
+            
             @-webkit-keyframes rotation {
                 from {
                         -webkit-transform: rotate(0deg);
@@ -38,36 +44,55 @@
                         -webkit-transform: rotate(359deg);
                 }
             }
-            
         }
         #X{
+            z-index: 200;
             position: absolute;
-            top: 30px;
-            right: 30px;
+            top: 15px;
+            right: 15px;
+            @include md{
+                top: 30px;
+                right: 30px;
+            }
         }
         #handle{
-            position: absolute;
-            top: -30px;
-            z-index: 2;
-            left: 80px;
-            transform:rotate(20deg)
+            display: none;
+            @include md{
+                display: block;
+                position: absolute;
+                top: -30px;
+                z-index: 2;
+                left: 80px;
+                transform:rotate(20deg)
+            }
         }
         #waves{
-            position: absolute;
-            top: 0;
-            left: -20px;
-            z-index: -1;
-            width: 50%;
+            display: none;
+            @include md{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -20px;
+                z-index: -1;
+                width: 50%;
+            }
         }
         #form{
             display: flex;
-            justify-content: flex-end;
-            margin: 10px 80px 50px;
+            justify-content: center;
+            margin: 20px 0 40px 0;
+            @include md{
+                justify-content: flex-end;
+                margin: 10px 80px 50px;
+            }
             form{
+                width: 80%;
+                @include md{
+                    width: 60%;
+                }
                 .input{
                     position: relative;
                 }
-                width: 60%;
                 .input-path-container{
                     position: absolute;
                     top: 0;
@@ -76,7 +101,6 @@
             }
             section{
                 // border: 1px red solid;
-                border-bottom: solid $green 2px;
                 input, textarea{
                     background-color: transparent;
                     font-family: 'Nunito', sans-serif;
@@ -101,28 +125,38 @@
                     /* Microsoft Edge */
                     color: $green;
                 }
+                .bottom-border{
+                    height:2px;
+                    width: 100%;
+                    background-color: $green;
+                }
             }
             :nth-child(4){
                 border-bottom: none;
             }
             :nth-child(5){
                 border-bottom: none;
+                :hover{
+                    transition: 0.25s;
+                    color: $hotpink;
+                    background-color: $yellow;
+                }
             }
-            // :nth-child(6){
-            //     border-bottom: none;
-            // }
         }
         
     }
     
     h2{
-        padding-top:30px;
+        padding-top: 50px;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
         font-size: 48px;
         font-weight: 800;
         font-style: italic;
         color:$hotpink;
+        @include md{
+            padding-top:30px;
+        }
     }
 
     h3{
@@ -136,7 +170,10 @@
         color: $hotpink;
     }
     #description{
-        padding: 0;
+        padding: 0 60px;
+        @include md{
+            padding: 0;
+        }
     }
 }
         

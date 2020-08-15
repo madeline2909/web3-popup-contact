@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,800;0,900&family=Nunito:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,800;0,900;1,500;1,800;1,900&family=Nunito:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/bb64da5fe1.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="css/styles.css">
+    
     <title>Web 3 Pop-up Contact</title>
 </head>
 
@@ -40,11 +41,9 @@
         </div>
     </header>
     <section id="pop-up">
-            <div id="shadow-bg">
-            </div>
             <div>
                 <svg id="X" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
-                    <g stroke="#42B5A0" stroke-width="5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                    <g stroke="#FEC858" stroke-width="5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M3.534 3.922l19.799 19.8M23.722 3.533l-19.8 19.8"/>
                     </g>
                 </svg>
@@ -68,13 +67,16 @@
                             </svg>
                             
                             <input id="name" type="text" placeholder="Name" name="name">
+                            <div class="bottom-border"></div>
                         </section>
+        
                         <section class="input">
                             <svg class="input-path-container" width="359" height="45" xmlns="http://www.w3.org/2000/svg">
                                 <path id="email-path" d="M0 .522c37 0 112.109 43 185.875 43S298.793.522 359 .522" stroke="none" fill="none" fill-rule="evenodd"/>
                             </svg>
                         
                             <input id="email"  type="email" placeholder="Email" name="email">
+                            <div class="bottom-border"></div>
                         </section>
                         
                         <section  class="input">
@@ -82,10 +84,13 @@
                                 <path id="message-path" d="M0 .522c37 0 112.109 43 185.875 43S298.793.522 359 .522" stroke="none" fill="none" fill-rule="evenodd"/>
                             </svg>
                             <textarea id="message" placeholder="Your Message" name="comment" cols="50" rows="5"></textarea>
+                            <div class="bottom-border"></div>
                         </section>
+        
                         <section class="main-text">
                             <h3>We don’t share your information to others</h3>
                         </section>
+        
                         <div>
                             <button type="submit" class="button">SEND</button>
                         </div>
@@ -124,7 +129,15 @@
             <h1>Explore the <br class="show-for-xl"> World of <span class="italic">Music</span></h1>
         </div>
     </section>
-    
+    <section id="index-content" class="grid-container">
+        <div>
+            <div id="intro">
+                <p>From our massive guitar galleries to our drum room to our fully loaded demo studios, we offer the most comprehensive selection of music equipment and quality instruments available. Our friendly and knowledgeable staff are ready to help you find the best gear for your needs and your budget.</p>
+            </div>
+            <img src="img/home1.jpg" alt="band performing">
+            <img src="img/home2.jpeg" alt="guitarist performing">
+        </div>
+    </section>
     <section id="music-box-container">
        
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 150" width="127" height="172" id="music">
