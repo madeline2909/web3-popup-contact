@@ -30,15 +30,14 @@
             }
 
             #note-5{
-                
+
             }
         }
 
     }
 
     .animating {
-        animation: bounce;
-        animation-duration: 3s;
+        animation: bounce 3s;
     }
 
     @keyframes bounce {

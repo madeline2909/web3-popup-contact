@@ -893,8 +893,7 @@ header div #burger-container i {
   transition: 0.25s;
 }
 #music-box-container .animating {
-  animation: bounce;
-  animation-duration: 3s;
+  animation: bounce 3s;
 }
 @keyframes bounce {
   8% {
