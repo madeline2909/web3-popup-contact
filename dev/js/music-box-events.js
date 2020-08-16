@@ -28,8 +28,6 @@ $("#box").on("click", function(){
     }
 });
 
-
-
 $("#box").on('click', function() {
     $(this).addClass('animating');
     setTimeout(() => {

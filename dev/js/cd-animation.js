@@ -54,9 +54,9 @@ formAnimationTimeline.from(".main-text",{
 }, "-=1.25")
 
 .from("button",{
-    duration: 0.25,
+    duration: motionPathAnimationTime,
     alpha:0
-})
+}, "-=1.25")
 
 .from(".bottom-border",{
     duration: motionPathAnimationTime,
