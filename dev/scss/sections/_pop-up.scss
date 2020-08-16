@@ -2,28 +2,20 @@
     Pop-up
 ============= */
 #pop-up-container{
-    // display: none;
-    position: fixed;
+    position: absolute;
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-    #shadow{
-        z-index: -1;
-        height: 100vh;
-        width: 100%;
-        position: fixed;
-        background-color: rgba($color:black, $alpha: 0.4);
-    }
+    z-index: 1;
     #pop-up{
-        position: relative;
+        z-index: 1;
+        position: fixed;
         overflow: hidden;
         width: 90%;
         height: auto;
         background-color: white;
-        z-index: 1;
         @include md{
             width: 700px;
         }
@@ -182,5 +174,11 @@
             padding: 0;
         }
     }
+}
+#shadow{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba($color:black, $alpha: 0.4);
 }
         

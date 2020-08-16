@@ -694,28 +694,21 @@ header div #burger-container i {
     Pop-up
 ============= */
 #pop-up-container {
-  position: fixed;
+  position: absolute;
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-}
-#pop-up-container #shadow {
-  z-index: -1;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 #pop-up-container #pop-up {
-  position: relative;
+  z-index: 1;
+  position: fixed;
   overflow: hidden;
   width: 90%;
   height: auto;
   background-color: white;
-  z-index: 1;
 }
 @media (min-width: 768px) {
   #pop-up-container #pop-up {
@@ -883,11 +876,17 @@ header div #burger-container i {
   }
 }
 
+#shadow {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 #music-box-container {
   position: fixed;
   bottom: 20px;
   right: 15px;
-  z-index: 100;
 }
 @media (min-width: 768px) {
   #music-box-container {
