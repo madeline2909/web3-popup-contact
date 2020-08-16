@@ -887,6 +887,7 @@ header div #burger-container i {
   position: fixed;
   bottom: 20px;
   right: 15px;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   #music-box-container {
