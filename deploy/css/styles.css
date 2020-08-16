@@ -693,9 +693,8 @@ header div #burger-container i {
 /* =============
     Pop-up
 ============= */
-#pop-up {
+#pop-up-container {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.4);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -703,7 +702,14 @@ header div #burger-container i {
   justify-content: center;
   z-index: 2;
 }
-#pop-up > div {
+#pop-up-container #shadow {
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#pop-up-container #pop-up {
   position: relative;
   overflow: hidden;
   width: 90%;
@@ -712,11 +718,11 @@ header div #burger-container i {
   z-index: 1;
 }
 @media (min-width: 768px) {
-  #pop-up > div {
+  #pop-up-container #pop-up {
     width: 700px;
   }
 }
-#pop-up > div i {
+#pop-up-container #pop-up i {
   position: absolute;
   z-index: -1;
   left: -140px;
@@ -726,7 +732,7 @@ header div #burger-container i {
   -webkit-animation: rotation 2s infinite linear;
 }
 @media (min-width: 768px) {
-  #pop-up > div i {
+  #pop-up-container #pop-up i {
     z-index: 1;
     left: -145px;
     top: 100px;
@@ -742,23 +748,23 @@ header div #burger-container i {
     -webkit-transform: rotate(359deg);
   }
 }
-#pop-up > div #X {
+#pop-up-container #pop-up #X {
   z-index: 200;
   position: absolute;
   top: 15px;
   right: 15px;
 }
 @media (min-width: 768px) {
-  #pop-up > div #X {
+  #pop-up-container #pop-up #X {
     top: 30px;
     right: 30px;
   }
 }
-#pop-up > div #handle {
+#pop-up-container #pop-up #handle {
   display: none;
 }
 @media (min-width: 768px) {
-  #pop-up > div #handle {
+  #pop-up-container #pop-up #handle {
     display: block;
     position: absolute;
     top: -30px;
@@ -767,11 +773,11 @@ header div #burger-container i {
     transform: rotate(20deg);
   }
 }
-#pop-up > div #waves {
+#pop-up-container #pop-up #waves {
   display: none;
 }
 @media (min-width: 768px) {
-  #pop-up > div #waves {
+  #pop-up-container #pop-up #waves {
     display: block;
     position: absolute;
     top: 0;
@@ -780,34 +786,34 @@ header div #burger-container i {
     width: 50%;
   }
 }
-#pop-up > div #form {
+#pop-up-container #pop-up #form {
   display: flex;
   justify-content: center;
   margin: 20px 0 40px 0;
 }
 @media (min-width: 768px) {
-  #pop-up > div #form {
+  #pop-up-container #pop-up #form {
     justify-content: flex-end;
     margin: 10px 80px 50px;
   }
 }
-#pop-up > div #form form {
+#pop-up-container #pop-up #form form {
   width: 80%;
 }
 @media (min-width: 768px) {
-  #pop-up > div #form form {
+  #pop-up-container #pop-up #form form {
     width: 60%;
   }
 }
-#pop-up > div #form form .input {
+#pop-up-container #pop-up #form form .input {
   position: relative;
 }
-#pop-up > div #form form .input-path-container {
+#pop-up-container #pop-up #form form .input-path-container {
   position: absolute;
   top: 0;
   left: 0;
 }
-#pop-up > div #form section input, #pop-up > div #form section textarea {
+#pop-up-container #pop-up #form section input, #pop-up-container #pop-up #form section textarea {
   background-color: transparent;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
@@ -815,36 +821,36 @@ header div #burger-container i {
   width: 100%;
   padding: 20px 0;
 }
-#pop-up > div #form section ::placeholder {
+#pop-up-container #pop-up #form section ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #42B5A0;
   opacity: 1;
 }
-#pop-up > div #form section :-ms-input-placeholder {
+#pop-up-container #pop-up #form section :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #42B5A0;
 }
-#pop-up > div #form section ::-ms-input-placeholder {
+#pop-up-container #pop-up #form section ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #42B5A0;
 }
-#pop-up > div #form section .bottom-border {
+#pop-up-container #pop-up #form section .bottom-border {
   height: 2px;
   width: 100%;
   background-color: #42B5A0;
 }
-#pop-up > div #form :nth-child(4) {
+#pop-up-container #pop-up #form :nth-child(4) {
   border-bottom: none;
 }
-#pop-up > div #form :nth-child(5) {
+#pop-up-container #pop-up #form :nth-child(5) {
   border-bottom: none;
 }
-#pop-up > div #form :nth-child(5) :hover {
+#pop-up-container #pop-up #form :nth-child(5) :hover {
   transition: 0.25s;
   color: #FA448D;
   background-color: #FEC858;
 }
-#pop-up h2 {
+#pop-up-container h2 {
   padding-top: 50px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -854,11 +860,11 @@ header div #burger-container i {
   color: #FA448D;
 }
 @media (min-width: 768px) {
-  #pop-up h2 {
+  #pop-up-container h2 {
     padding-top: 30px;
   }
 }
-#pop-up h3 {
+#pop-up-container h3 {
   padding: 20px 0;
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -868,11 +874,11 @@ header div #burger-container i {
   font-style: italic;
   color: #FA448D;
 }
-#pop-up #description {
+#pop-up-container #description {
   padding: 0 60px;
 }
 @media (min-width: 768px) {
-  #pop-up #description {
+  #pop-up-container #description {
     padding: 0;
   }
 }
@@ -881,6 +887,7 @@ header div #burger-container i {
   position: fixed;
   bottom: 20px;
   right: 15px;
+  z-index: 100;
 }
 @media (min-width: 768px) {
   #music-box-container {

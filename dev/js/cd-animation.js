@@ -2,7 +2,7 @@ gsap.registerPlugin(MotionPathPlugin);
 
 
 var formAnimationTimeline = gsap.timeline({paused:true});
-var motionPathAnimationTime = 1.25;
+var motionPathAnimationTime = 1;
 // gsap.set("#input-path",{transformOrigin: "center"});
 gsap.set(".input",{transformOrigin: "left center", alpha:1})
 gsap.set(".bottom-border",{alpha:1});
@@ -12,9 +12,10 @@ let emailPath = document.querySelector("#email-path");
 let messagePath = document.querySelector("#message-path");
 
 formAnimationTimeline.from(".main-text",{
-    duration: 1,
-    y:"-=150",
-    alpha:0
+    duration: motionPathAnimationTime,
+    x:"150px",
+    alpha:0,
+    stagger: 0.25
 }, "formAnimation")
 
 .from("#name", {
@@ -24,7 +25,7 @@ formAnimationTimeline.from(".main-text",{
         align: namePath,
         alignOrigin: [0,0]
     },
-    duration: motionPathAnimationTime ,
+    duration: 1.5,
     ease: "power1.inOut",
     alpha:0   
 }, "formAnimation")
@@ -36,10 +37,10 @@ formAnimationTimeline.from(".main-text",{
         align: emailPath,
         alignOrigin: [0,0]
     },
-    duration: motionPathAnimationTime,
+    duration: 1.5,
     ease: "power1.inOut",
     alpha:0
-}, "-=1")
+}, "-=1.25")
 .from("#message", {
     motionPath: {
         path: messagePath,
@@ -47,18 +48,18 @@ formAnimationTimeline.from(".main-text",{
         align: messagePath,
         alignOrigin: [0,0]
     },
-    duration: motionPathAnimationTime,
+    duration: 1.5,
     ease: "power1.inOut",
     alpha:0
-}, "-=1")
+}, "-=1.25")
 
 .from("button",{
-    duration: motionPathAnimationTime,
+    duration: 0.25,
     alpha:0
-}, "formAnimation")
+})
 
 .from(".bottom-border",{
-    duration: 2,
+    duration: motionPathAnimationTime,
     x:"100px",
     alpha:0
 }, "formAnimation")

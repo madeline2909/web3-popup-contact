@@ -18,7 +18,7 @@ $("#X").on("click", function (){
     canYouSeeTheForm = false;
 });
 
-var formBackground = document.querySelector("#pop-up");
+var formBackground = document.querySelector("#shadow");
 window.onclick = function(event){
     if(event.target == formBackground){
         musicBoxAnimationTimeline.reverse("formToRotateReverse");
