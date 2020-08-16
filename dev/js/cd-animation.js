@@ -58,7 +58,8 @@ formAnimationTimeline.from(".main-text",{
 }, "formAnimation")
 
 .from(".bottom-border",{
-    duration: 0.5,
+    duration: 2,
+    x:"100px",
     alpha:0
-}, "-=1")
+}, "formAnimation")
 ;
