@@ -885,15 +885,9 @@ header div #burger-container i {
 
 #music-box-container {
   position: fixed;
-  bottom: 20px;
-  right: 15px;
-  z-index: 1;
-}
-@media (min-width: 768px) {
-  #music-box-container {
-    bottom: 30px;
-    right: 30px;
-  }
+  bottom: 0px;
+  right: 0px;
+  z-index: 0;
 }
 #music-box-container #music #box {
   cursor: pointer;
