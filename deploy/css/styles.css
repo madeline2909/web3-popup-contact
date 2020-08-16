@@ -701,6 +701,7 @@ header div #burger-container i {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 #pop-up > div {
   position: relative;

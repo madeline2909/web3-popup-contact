@@ -21,12 +21,13 @@ $("#box").on("click", function(){
     console.log("mouse click");
     if(canYouSeeTheForm === false){
         formAnimationTimeline.play();
-        musicBoxAnimationTimeline.play("musicToForm");
+        musicBoxAnimationTimeline.play("formToRotate");
         canYouSeeTheForm = true;
     }else{
         console.log
     }
 });
+
 
 
 $("#box").on('click', function() {
