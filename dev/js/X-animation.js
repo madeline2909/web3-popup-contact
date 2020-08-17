@@ -24,7 +24,7 @@ $("#X").on("click", function () {
     }
 });
 
-var formBackground = document.querySelector("#pop-up-container");
+var formBackground = document.querySelector("#shadow");
 window.onclick = function (event) {
     if (canYouSeeTheForm === true) {
         if (event.target == formBackground) {
