@@ -103,14 +103,6 @@
 		"oAP": "/deploy/sound/eve.mp3",
 		"oF": 0
 		},
-	"/design/music store.sketch": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/design/music store.sketch",
-		"oF": 0
-		},
 	"/dev/global/footer.kit": {
 		"cB": 0,
 		"ft": 2048,
