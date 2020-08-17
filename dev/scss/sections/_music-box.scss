@@ -1,6 +1,6 @@
 #music-box-container {
-    position: fixed;
     bottom: 0px;
+    position: fixed;
     right: 0px;
     z-index: 0;
 
@@ -9,7 +9,6 @@
             cursor: pointer;
             transition: 0.25s;
         }
-
     }
 
     .animating {

@@ -567,19 +567,19 @@ header div #burger-container i {
     Index
 ============= */
 #hero-image {
-  background-position: center;
-  background-size: cover;
-  width: 100vw;
-  height: 80vh;
-  background-image: url(../img/hero.jpg);
   background-blend-mode: multiply;
   background-color: rgba(73, 33, 136, 0.3);
+  background-image: url(../img/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
   margin-bottom: 20px;
+  width: 100vw;
 }
 #hero-image > div {
-  height: 100%;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 100%;
 }
 @media (min-width: 768px) {
   #hero-image > div {
@@ -595,18 +595,18 @@ header div #burger-container i {
   color: #FA448D;
   font-family: "Montserrat", sans-serif;
   font-size: 3.75rem;
-  line-height: 4.0625rem;
   font-weight: 900;
-  text-align: left;
+  line-height: 4.0625rem;
   margin: 0 100px 0 30px;
+  text-align: left;
 }
 @media (min-width: 768px) {
   #hero-image > div h1 {
-    width: 60%;
-    text-align: center;
     font-size: 4.5rem;
     line-height: 5.5rem;
     margin: 0;
+    text-align: center;
+    width: 60%;
   }
 }
 @media (min-width: 1025px) {
@@ -616,9 +616,9 @@ header div #burger-container i {
 }
 @media (min-width: 1440px) {
   #hero-image > div h1 {
-    width: 60%;
     margin: 0 60px;
     text-align: left;
+    width: 60%;
   }
 }
 #hero-image > div h1 .italic {
@@ -630,39 +630,39 @@ header div #burger-container i {
 }
 #index-content div {
   display: grid;
-  grid-template-rows: 400px 300px 400px;
   grid-template-areas: "img1" "p" "img2";
+  grid-template-rows: 400px 300px 400px;
 }
 @media (min-width: 768px) {
   #index-content div {
+    grid-gap: 20px;
+    grid-template-areas: "p img1" "img2 img2";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 300px 500px;
-    grid-template-areas: "p img1" "img2 img2";
-    grid-gap: 20px;
   }
 }
 @media (min-width: 1025px) {
   #index-content div {
+    grid-gap: 20px;
+    grid-template-areas: ". p img1 img1 ." "img2 img2 img2 img2 img2";
     grid-template-columns: auto repeat(3, 30%) auto;
     grid-template-rows: 500px 500px;
-    grid-template-areas: ". p img1 img1 ." "img2 img2 img2 img2 img2";
-    grid-gap: 20px;
   }
 }
 #index-content div #intro {
-  grid-area: p;
-  display: flex;
   align-items: center;
-  justify-content: center;
   background-color: #331B39;
+  display: flex;
+  grid-area: p;
+  justify-content: center;
 }
 #index-content div #intro p {
   color: #FA448D;
   font-family: "Nunito", sans-serif;
-  font-weight: 800;
   font-size: 1.125rem;
-  line-height: 1.5625rem;
   font-style: italic;
+  font-weight: 800;
+  line-height: 1.5625rem;
   margin: 0 20px;
 }
 @media (min-width: 768px) {
@@ -677,15 +677,15 @@ header div #burger-container i {
 }
 #index-content div :nth-child(2) {
   grid-area: img1;
+  height: 100%;
   object-fit: cover;
   object-position: center bottom;
   width: 100%;
-  height: 100%;
 }
 #index-content div :nth-child(3) {
-  object-fit: cover;
   grid-area: img2;
   height: 100%;
+  object-fit: cover;
   object-position: center;
   width: 100%;
 }
@@ -885,8 +885,8 @@ header div #burger-container i {
 }
 
 #music-box-container {
-  position: fixed;
   bottom: 0px;
+  position: fixed;
   right: 0px;
   z-index: 0;
 }

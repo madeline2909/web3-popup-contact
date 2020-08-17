@@ -1,40 +1,38 @@
 var canYouSeeTheForm = false;
 
-$("#box").on("mouseenter", function(){
+$("#box").on("mouseenter", function () {
     console.log("mouse enter !!!");
-    if(canYouSeeTheForm === false){
+    if (canYouSeeTheForm === false) {
         musicBoxAnimationTimeline.play("boxToMusic");
-    }else{
+    } else {
         console.log
     }
 });
-$("#box").on("mouseleave", function(){
+$("#box").on("mouseleave", function () {
     console.log("mouse leave");
-    if(canYouSeeTheForm === false){
+    if (canYouSeeTheForm === false) {
         musicBoxAnimationTimeline.reverse("boxToMuiscReverse");
-    }else{
+    } else {
         //console.log
     }
 });
 
-$("#box").on("click", function(){
+$("#box").on("click", function () {
     console.log("mouse click");
-    if(canYouSeeTheForm === false){
+    if (canYouSeeTheForm === false) {
         formAnimationTimeline.play();
         musicBoxAnimationTimeline.play("MusicToForm");
         canYouSeeTheForm = true;
-    }else{
+    } else {
         //console.log
-       
-        
+
+
     }
 });
 
-$("#box").on('click', function() {
+$("#box").on('click', function () {
     $(this).addClass('animating');
     setTimeout(() => {
-      $(this).removeClass('animating');
+        $(this).removeClass('animating');
     }, 1000);
-  });
-
-
+});
