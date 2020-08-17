@@ -14,7 +14,7 @@ $("#X").on("mouseleave", function(){
 $("#X").on("click", function (){
     if(canYouSeeTheForm === true){
         console.log("X clicked");
-        musicBoxAnimationTimeline.reverse("formToRotateReverse");
+        musicBoxAnimationTimeline.play("MusicToGreen");
         formAnimationTimeline.reverse();
         canYouSeeTheForm = false;
     }
@@ -24,7 +24,8 @@ var formBackground = document.querySelector("#shadow");
 window.onclick = function(event){
     if(canYouSeeTheForm === true){
         if(event.target == formBackground){
-        musicBoxAnimationTimeline.reverse("formToRotateReverse");
+            console.log("clicked shadow");
+        musicBoxAnimationTimeline.play("MusicToGreen");
         formAnimationTimeline.reverse();
         canYouSeeTheForm = false;
         }

@@ -1,7 +1,7 @@
 var canYouSeeTheForm = false;
 
 $("#box").on("mouseenter", function(){
-    console.log("mouse enter");
+    console.log("mouse enter !!!");
     if(canYouSeeTheForm === false){
         musicBoxAnimationTimeline.play("boxToMusic");
     }else{
@@ -13,7 +13,7 @@ $("#box").on("mouseleave", function(){
     if(canYouSeeTheForm === false){
         musicBoxAnimationTimeline.reverse("boxToMuiscReverse");
     }else{
-        console.log
+        //console.log
     }
 });
 
@@ -21,10 +21,12 @@ $("#box").on("click", function(){
     console.log("mouse click");
     if(canYouSeeTheForm === false){
         formAnimationTimeline.play();
-        musicBoxAnimationTimeline.play("formToRotate");
+        musicBoxAnimationTimeline.play("MusicToForm");
         canYouSeeTheForm = true;
     }else{
-        console.log
+        //console.log
+       
+        
     }
 });
 
@@ -34,3 +36,5 @@ $("#box").on('click', function() {
       $(this).removeClass('animating');
     }, 1000);
   });
+
+
